@@ -1,0 +1,17 @@
+from sympy import *
+r,t=symbols('r t')
+r1=sqrt(4/sin(2*t))
+r2=sqrt(16*sin(2*t))
+dr1=diff(r1,t)
+dr2=diff(r2,t)
+t1=(r1/dr1)
+t2=(r2/dr2)
+q=solve(r1-r2,t)
+print("The point of intersection of two curves is ",q)
+w1=t1.subs({t:float(q[0])})
+w2=t2.subs({t:float(q[0])})
+y1=atan(w1)
+y2=atan(w2)
+w=abs(y1-y2)
+x=180*w/pi
+print("Angle between two curves is %0.3f"%x)

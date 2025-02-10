@@ -1,0 +1,4 @@
+It has a huge campus.
+RNSIT is in Bengaluru.
+There are 10 individual buildings.
+There are atleast 3 floors in each building.

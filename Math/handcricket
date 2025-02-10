@@ -1,0 +1,36 @@
+import random
+
+print("Welcome to Hand Cricket!")
+user_name = input("Enter your name: ")
+print(f"Hello {user_name}! You will be batting first.")
+
+computer_score = 0
+user_score = 0
+
+while True:
+    print(f"{user_name}'s score:", user_score)
+    print("Computer score:", computer_score)
+
+    user_input = input("Enter your score (0-6): ")
+    if int(user_input) > 6:
+        print("Invalid input! Score should be between 0-6")
+        continue
+    user_score += int(user_input)
+
+    if user_input == "0":
+        print("You're out!")
+        break
+    elif user_score >= 20:
+        print(f"You won, {user_name}!")
+        break
+
+    computer_input = str(random.randint(0, 6))
+    print("Computer score:", computer_input)
+    computer_score += int(computer_input)
+
+    if computer_input == "0":
+        print("Computer is out!")
+        break
+    elif computer_score >= 20:
+        print("Computer won!")
+        break
